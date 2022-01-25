@@ -1,23 +1,14 @@
 #!/bin/bash
-#docker container rm -f $(docker ps -a -q)
-rm -rf tempdir
-#mkdir tempdir
-mkdir tempdir
-#mkdir tempdir/backend
-#mkdir tempdir/frontend
-cd tempdir
 
 git clone https://github.com/nikolayg/sample-python-api
-#rm Pipfile
-#rm Pipfile.Lock
+pwd
 
-#cmd command om python script uit te voeren
 echo "FROM python:3.6
 COPY ./sample-python-api .
 COPY requirements.txt .
 #RUN pip install pipenv
 RUN pip install -r requirements.txt
-EXPOSE 4000
+EXPOSE 5000
 CMD python ./src/main.py" > Dockerfile
 
 pwd
