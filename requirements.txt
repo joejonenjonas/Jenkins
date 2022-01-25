@@ -1,0 +1,4 @@
+flask==1.0.2
+flask-restplus==0.12.1
+py==1.6.0
+werkzeug==0.14.1
