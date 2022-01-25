@@ -1,5 +1,5 @@
 #!/bin/bash
-docker container rm -f $(docker ps -a -q)
+#docker container rm -f $(docker ps -a -q)
 rm -rf tempdir
 #mkdir tempdir
 mkdir tempdir
