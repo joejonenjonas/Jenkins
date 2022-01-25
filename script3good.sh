@@ -18,6 +18,3 @@ docker build -t pyapp .
 #docker run -t -d -p 4000:4000 --name nikolaygapp pyapp
 docker run --network host -d pyapp
 docker ps -a 
-curl http://127.0.0.1:5000/api/swagger
-curl http://172.17.0.1:5000/api/swagger
-curl http://172.17.0.4:5000/api/swagger
