@@ -1,7 +1,11 @@
 #!/bin/bash
-#docker container rm -f $(docker ps -a -q)
-#rm -rf tempdir
+docker container rm -f $(docker ps -a -q)
+rm -rf tempdir
 #mkdir tempdir
+mkdir tempdir
+#mkdir tempdir/backend
+#mkdir tempdir/frontend
+cd tempdir
 
 git clone https://github.com/nikolayg/sample-python-api
 #rm Pipfile
