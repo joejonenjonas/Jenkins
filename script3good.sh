@@ -3,7 +3,6 @@
 #rm -rf tempdir
 #mkdir tempdir
 
-cd tempdir
 git clone https://github.com/nikolayg/sample-python-api
 #rm Pipfile
 #rm Pipfile.Lock
@@ -20,7 +19,8 @@ CMD python ./src/main.py" > Dockerfile
 pwd
 #cd tempdir
 docker build -t pyapp .
-#docker run -t -d -p 4000:4000 --name nikolaygapp pyapp
-docker run --network host -d pyapp
+docker run -t -d -p 4000:4000 --name nikolaygapp pyapp
+#docker run --network host -d pyapp
 docker ps -a 
 curl http://127.0.0.1:4000/api/swagger
+curl http://127.0.0.1:5000/api/swagger
